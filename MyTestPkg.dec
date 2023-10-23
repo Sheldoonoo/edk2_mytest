@@ -1,0 +1,15 @@
+
+
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = MyTestPkg
+  PACKAGE_UNI_FILE               = MyTestPkg.uni
+  PACKAGE_GUID                   = DB5F9D90-C2A0-4389-9336-8995DED1F62D
+  PACKAGE_VERSION                = 1.08
+
+
+
+[Protocols]
+
+## Include/Protocol/MyProtocol.h
+  gEfiMyProtocolGuid = { 0x99C55252, 0x54D1, 0x4596, { 0xA5, 0x6A, 0x7E, 0x52, 0xFB, 0xE4, 0x7A, 0xBE }}

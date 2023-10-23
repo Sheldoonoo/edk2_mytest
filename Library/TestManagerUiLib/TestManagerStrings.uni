@@ -1,0 +1,36 @@
+///** @file
+//
+// Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+//
+// Module Name:
+//
+//   TestManagerStrings.uni
+//
+// Abstract:
+//
+//   String definitions for Test Manager formset.
+//
+// Revision History:
+//
+// --*/
+
+/=#
+#langdef   en-US "English"
+#langdef   fr-FR "Français"
+
+#string STR_TM_BANNER                  #language en-US  "Test Manager"
+                                       #language fr-FR  "Test Manager"
+#string STR_TEST_MANAGER_HELP          #language en-US  "This selection will take you to the Test Manager"
+                                       #language fr-FR  "This selection will take you to the Test Manager"
+#string STR_HELP_FOOTER                #language en-US  "This is a Test Manager Menu: Hello World!."
+                                       #language fr-FR  "This is a Test Manager Menu: Hello World!."
+#string STR_AND                        #language en-US  " and "
+                                       #language fr-FR  " et "
+#string STR_TEST_OPTION_BANNER         #language en-US  "Test Manager Menu"
+                                       #language fr-FR  "Test Manager Menu"
+#string STR_ANY_KEY_CONTINUE           #language en-US  "Press any key to continue..."
+                                       #language fr-FR  "Appuie n'importe quelle pour continuer..."
+#string STR_LAST_STRING                #language en-US  ""
+                                       #language fr-FR  ""
+

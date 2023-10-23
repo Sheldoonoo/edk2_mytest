@@ -1,0 +1,40 @@
+///** @file
+//
+//  Test Manager formset.
+//
+//  Copyright (c) 2004 - 2015, Intel Corporation. All rights reserved.<BR>
+//  SPDX-License-Identifier: BSD-2-Clause-Patent
+//
+//**/40fb112e-0020-45b3-b47e-70ca41bcd834
+#define FORMSET_GUID  { 0x40fb112e, 0x0020, 0x45b3, 0xb4, 0x7e, 0x70, 0xca, 0x41, 0xbc, 0xd8, 0x34 }
+
+#define TEST_MANAGER_FORM_ID     0x1000
+
+#define LABEL_TEST_OPTION        0x00
+#define LABEL_TEST_OPTION_END    0x01
+
+formset
+  guid      = FORMSET_GUID,
+  title     = STRING_TOKEN(STR_TM_BANNER),
+  help      = STRING_TOKEN(STR_TEST_MANAGER_HELP),
+  classguid = gEfiIfrFrontPageGuid,
+
+  form formid = TEST_MANAGER_FORM_ID,
+       title  = STRING_TOKEN(STR_TM_BANNER);
+
+    subtitle text = STRING_TOKEN(STR_LAST_STRING);
+    subtitle text = STRING_TOKEN(STR_TEST_OPTION_BANNER);
+    subtitle text = STRING_TOKEN(STR_LAST_STRING);
+
+    //
+    // This is where we will dynamically add choices for the Test Manager
+    //
+    label LABEL_TEST_OPTION;
+    label LABEL_TEST_OPTION_END;
+
+    subtitle text = STRING_TOKEN(STR_LAST_STRING);
+    subtitle text = STRING_TOKEN(STR_HELP_FOOTER);
+
+  endform;
+
+endformset;

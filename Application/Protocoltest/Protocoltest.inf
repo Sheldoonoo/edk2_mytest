@@ -1,0 +1,52 @@
+## @file
+#  Sample UEFI Application Reference EDKII Module.
+#
+#  This is a sample shell application that will print "UEFI Hello World!" to the
+#  UEFI Console based on PCD setting.
+#
+#  It demos how to use EDKII PCD mechanism to make code more flexible.
+#
+#  Copyright (c) 2008 - 2018, Intel Corporation. All rights reserved.<BR>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Protocoltest
+
+  FILE_GUID                      = b87f6659-5572-49ff-ae05-7cfd901a509f
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+#
+#  This flag specifies whether HII resource section is generated into PE image.
+#
+  UEFI_HII_RESOURCE_SECTION      = TRUE
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 EBC
+#
+
+[Sources]
+  Protocoltest.c
+  #HelloWorldStr.uni
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  MyTestPkg/MyTestPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  PcdLib
+
+[Protocols]
+gEfiMyProtocolGuid
+

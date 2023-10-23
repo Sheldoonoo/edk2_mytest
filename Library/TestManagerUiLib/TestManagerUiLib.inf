@@ -1,0 +1,66 @@
+## @file
+#  Test Manager Library used by UiApp.
+#
+#  Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = TestManagerUiLib
+  MODULE_UNI_FILE                = TestManagerUiLib.uni
+  FILE_GUID                      = 07AF332E-522C-4DDF-90EE-5D1EF204B541
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = NULL|DXE_DRIVER UEFI_APPLICATION
+  CONSTRUCTOR                    = TestManagerUiLibConstructor
+  DESTRUCTOR                     = TestManagerUiLibDestructor
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 EBC
+#
+
+[Sources]
+  TestManager.h
+  TestManagerVfr.Vfr
+  TestManagerStrings.uni
+  TestManager.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  MyTestPkg/MyTestPkg.dec
+
+[LibraryClasses]
+  UefiRuntimeServicesTableLib
+  ReportStatusCodeLib
+  MemoryAllocationLib
+  UefiLib
+  UefiBootServicesTableLib
+  BaseMemoryLib
+  DebugLib
+  PrintLib
+  HiiLib
+  UefiBootManagerLib
+
+[Guids]
+  gEfiIfrTianoGuid                              ## CONSUMES ## GUID (Extended IFR Guid Opcode)
+  gEfiIfrFrontPageGuid                          ## CONSUMES ## GUID
+
+[Protocols]
+  gEfiHiiConfigAccessProtocolGuid               ## CONSUMES
+  gEfiDevicePathToTextProtocolGuid              ## CONSUMES
+  gEdkiiFormBrowserEx2ProtocolGuid              ## CONSUMES
+
+[FeaturePcd]
+
+[Pcd]
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow                         ## CONSUMES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn                      ## CONSUMES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution         ## CONSUMES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution           ## CONSUMES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn                 ## CONSUMES ## SOMETIMES_PRODUCES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow                    ## CONSUMES ## SOMETIMES_PRODUCES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoHorizontalResolution    ## CONSUMES
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution      ## CONSUMES

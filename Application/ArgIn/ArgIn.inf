@@ -1,0 +1,53 @@
+## @file
+#  Sample UEFI Application Reference EDKII Module.
+#
+#  This is a sample shell application that will print "UEFI Hello World!" to the
+#  UEFI Console based on PCD setting.
+#
+#  It demos how to use EDKII PCD mechanism to make code more flexible.
+#
+#  Copyright (c) 2008 - 2018, Intel Corporation. All rights reserved.<BR>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = ArgIn
+
+  FILE_GUID                      = 39242294-0f06-47b2-8f9c-0c1eaa6b0b0e
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 EBC
+#
+
+[Sources]
+  ArgIn.c
+
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+#   EmulatorPkg/EmulatorPkg.dec
+  ShellPkg/ShellPkg.dec
+  MyTestPkg/MyTestPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  ShellLib
+  DebugLib
+  HandleParsingLib
+  ShellCommandLib
+
+
+                             
+  
