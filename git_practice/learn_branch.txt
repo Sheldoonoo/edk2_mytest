@@ -7,3 +7,5 @@ enable the Create a new commit even if fast-forward is possible option will be g
 ok now use the double forward
 goon
 goon
+goon
+goon
