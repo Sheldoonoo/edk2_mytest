@@ -1,2 +1,5 @@
 now we start learn branch!
 branch checkout!
+ok now i tell you 
+when use sourcetree merge 
+enable the Create a new commit even if fast-forward is possible option will be good to view!!! 
