@@ -5,3 +5,5 @@ when use sourcetree merge
 enable the Create a new commit even if fast-forward is possible option will be good to view!!! 
 
 ok now use the double forward
+goon
+goon
